@@ -7,7 +7,7 @@ Go to https://github.com/apps/renovate/installations/new to select which repo un
 ## Rules defined in this preset
 
 - For remirror packages, a pull request will be created at once when there is a new version.
-- For other packages, a pull request will be created *monthly*, which will contains all available updates.
+- For other packages, two pull requests will be created *monthly*, which will contains all available major updates and non-major updates.
 - Renovate will run `yarn-deduplicate --strategy fewer` for every pull requests to make sure that there is not dependency duplication.
 - An "Dependency Dashboard" issue will be created for each repository. This issue contains a list of all PRs pending, open, closed (unmerged) or in error.
 
