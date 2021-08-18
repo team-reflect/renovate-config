@@ -1,0 +1,29 @@
+{
+    "extends": [
+        "config:base",
+        ":semanticCommitTypeAll(chore)"
+    ],
+    "packageRules": [
+        {
+            "groupName": "remirror packages",
+            "matchPackagePatterns": [
+                ".*remirror.*"
+            ]
+        },
+        {
+            "groupName": "dependencies",
+            "excludePackagePatterns": [
+                ".*remirror.*"
+            ],
+            "extends": [
+                "schedule:monthly"
+            ]
+        }
+    ],
+    "prCreation": "not-pending",
+    "rangeStrategy": "bump",
+    "postUpdateOptions": [
+        "yarnDedupeFewer"
+    ],
+    "dependencyDashboard": true
+}
